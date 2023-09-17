@@ -1,0 +1,101 @@
+#body-bg{
+    background:url('../images/dark\ home\ bg\ \(1\).jpg');
+    background-position: center center;
+    background-size: cover !important;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    fill: contrast(109%);
+}
+
+body.dark #body-bg{
+    filter:contrast(109%) brightness(110%) saturate(110%);
+}
+
+#nav-dots{
+    margin-top: 65px;
+    margin-right: 18px;
+    z-index: 45 !important;
+}
+
+.diamond{
+    /* diamond */
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+    /* square */
+    /* clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%); */
+
+    /* clip-path: circle(50% at 50% 50%); */
+    /* circle */
+
+    /* border square */
+    /* clip-path: polygon(0% 0%, 0% 100%, 32% 100%, 32% 40%, 65% 40%, 65% 68%, 32% 68%, 32% 99%, 100% 100%, 100% 0%); */
+
+    scale:0.4;
+    margin-bottom: 15px;
+}
+
+.diamond:hover{
+    opacity: 0.6;
+}
+
+.diamond:hover ~ #diamondtext{
+    display: block !important;
+}
+
+#diamondtext{
+    display: none;
+
+    position: absolute;
+    left: -95px;
+    top: 0;
+}
+
+
+#loading{
+    animation:myspin2 2s ease infinite forwards;
+}
+
+.spinner{
+    animation:myspin 17s linear infinite forwards;
+}
+
+.spinner2{
+    animation:myspin2 11s linear infinite forwards;
+}
+
+
+
+@keyframes myspin{
+    from{
+        transform:rotate(-90deg);
+    }
+    to{
+        transform:rotate(105deg);
+    }
+}
+
+@keyframes myspin2{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@media only screen and (min-width:500px){
+    #nav-dots{
+        margin-right: 30px;
+    }
+}
+
+@media only screen and (min-width:760px){
+    #nav-dots{
+        margin-right: 65px;
+    }
+    
+
+    .diamond{
+        scale: 0.55;
+    }
+}
